@@ -1,0 +1,279 @@
+/*Written by Jakob Syvertsen and Zane Harlan*/
+body { 
+    font-size: 100%;
+    font-family: Georgia, 'Times New Roman', Times, serif; 
+    line-height: 1.5em;
+    background: #aeaead;
+    text-align: center;
+}
+
+.wrapper {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-gap: 10px;
+    }
+    * {
+  box-sizing: border-box;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+@media only screen and (max-width: 768px) {
+    [class="header-wrapper"] {
+        font-size: 24px !important;
+        line-height: 24px;
+        text-align: center;
+        vertical-align: auto;
+    }
+
+    [class*="wrapper"] {
+    grid-template-columns: 100%;
+    font-size: 20px;
+    }
+    h1 {
+        line-height: 1em;
+    }
+    input#submit {
+        width: 100%;
+        height: 5%;
+        min-height: 1.4em;
+    }
+    .flex-column{
+        width: 100% !important;
+    }
+    .form-padding {
+        padding-left: 0em !important;
+    }
+    .page-wrapper {
+        padding-left: 0em !important;
+        padding-right: 0em !important;
+        max-width: 768px !important;
+        width: 100%;
+        
+    }
+    td {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        margin: 0 !important;
+        max-width: 25% !important;
+        width: 10%;
+
+    }
+    th {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        margin: 0 !important;
+        max-width: 25% !important;
+        width: auto;
+    }
+    table {
+        max-width: 768px !important;
+        width: auto;
+    }
+    .header-link {
+        vertical-align:bottom !important;
+    }
+  
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+.flex-row {
+    display: flex;
+}
+
+.sig_wrapper {
+    border: 1px solid #cc1212;
+    border-bottom: 0;
+    height: 100%;
+    margin-top: 2em;
+}
+
+canvas#signature-pad {
+    background: #ffff;
+    width: 100%;
+    height: 100%;
+    cursor: crosshair;
+}
+button#clear {
+    height: 100%;
+    width: 50%;
+    background: #cc1212;
+    border: 1px solid black;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+}
+button#clear span {
+    display: block;
+}
+button#clear:hover {
+    background: #a10000;
+}
+button#sign {
+    height: 100%;
+    width: 50%;
+    background: #cc1212;
+    border: 1px solid black;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+}
+button#sign span {
+    display: block;
+}
+button#sign:hover {
+    background: #a10000;
+}
+
+
+button#sign:disabled, button#clear:disabled, input[type=submit]:disabled, input[type=submit]:hover:disabled {
+    background: #d3d3d3;
+    color: #a9a9a9;
+    cursor: not-allowed;
+}
+
+
+.header-wrapper {
+    background: #cc1212;
+    display: flex;
+    font-size: 24px;
+    line-height: 24px;
+}
+
+
+a, a:visited, h1 a, h1 a:visited, h2 a, h2 a:visited  h3 a, h3 a:visited{
+    padding: 7px 16px;
+    font-weight: bold;
+    color: #237fa1;
+    display: block;
+    text-decoration: none;
+
+}
+
+ a:hover, a:active, h1 a:hover, h1 a:active, h2 a:hover, h2 a:active, h3 a:hover, h3 a:active {
+    color: #c00;
+    text-decoration: none;
+}
+
+a.header-link {
+    padding: 7px 16px;
+    font-weight: bold;
+    color: #fff;
+    display: block;
+    text-decoration: none;
+}
+
+a:hover.header-link {
+    background: #a10000;
+}
+
+.page-wrapper{
+    
+    background: #fff;
+    display:inline-block;
+    text-align: left;
+}
+
+th {
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    font-size: 20px;
+}
+td {
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    vertical-align: text-bottom;
+}
+
+input[type=radio] {
+    transform: scale(1.4);
+    float: left;
+    display: inline;
+    margin-right: 0.5em;
+    vertical-align: baseline;
+}
+label {
+    display: block;
+    padding-left: 60px;
+}
+
+.yes-no-labels {
+    padding-left: 0px !important;
+}
+
+input[type=submit] {
+    display: inline-block;
+    align-self: flex-start;
+    width: 40%;
+    height: auto;
+    background: #cc1212;
+    border: 1px solid black;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 24px;
+    margin-top: 1em;
+}
+input[type=submit]:hover {
+    background: #a10000;
+}
+
+.table-button {
+    background: #cc1212;
+    border: 1px solid black;
+    color: #fff !important;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 18px;
+    width: 7em;
+    text-align: center;
+}
+.table-button:hover {
+    background: #a10000;
+}
+
+.img-wrapper {
+    max-height: 300px;
+    height: 70%;
+    max-width: 100%; 
+    width: auto;
+    padding-bottom: 1em;
+    padding-top: 1em;
+}
+img[src=""] {
+    max-height: 0px;
+    width: auto;
+    padding-bottom: 1em;
+    padding-top: 1em;
+}
+
+.table-submit {
+    position: absolute;
+    bottom: 8;
+    left: 0;
+}
+
+.container-div {
+    display: table;
+    clear: both;
+}
+    
+.form-padding {
+    padding-left: 2em;
+}
+
+th {
+    text-align: center;
+}
+
+td {
+    text-align: center;
+}

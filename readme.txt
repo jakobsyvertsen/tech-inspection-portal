@@ -1,0 +1,2 @@
+Password for admin account, tech inspector account, and most of the owner accounts in the DB are 1Password$.
+You might have to change the password on each of the php forms to whatever your root password is (or set it to empty string if you don't use a password)
